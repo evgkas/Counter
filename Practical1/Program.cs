@@ -20,7 +20,7 @@
 
             if (symbolCounter > maxSymbols)
             {
-                maxSymbols = count;
+                maxSymbols = symbolCounter;
             }
         }
 
