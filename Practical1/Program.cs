@@ -3,28 +3,28 @@
     public static void Main()
     {
         Console.WriteLine("String:");
-        string line = Console.ReadLine();
-        Int32 max = 0;
-        Int32 count = 1;
+        string inputLine = Console.ReadLine();
+        Int32 maxSymbols = 0;
+        Int32 symbolCounter = 1;
 
-        for (int i = 1; i < line.Length; i++)
+        for (int i = 1; i < inputLine.Length; i++)
         {
-            if (line[i] != line[i - 1])
+            if (inputLine[i] != inputLine[i - 1])
             {
-                count++;
+                symbolCounter++;
             }
             else
             {
-                count = 1;
+                symbolCounter = 1;
             }
 
-            if (count > max)
+            if (symbolCounter > maxSymbols)
             {
-                max = count;
+                maxSymbols = count;
             }
         }
 
-        Console.WriteLine($"length = " + line.Length);
-        Console.WriteLine($"There is {max} different symbols in a row");
+        Console.WriteLine($"length = " + inputLine.Length);
+        Console.WriteLine($"There is {maxSymbols} different symbols in a row");
     }
 }
